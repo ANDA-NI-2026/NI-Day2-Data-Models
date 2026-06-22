@@ -24,7 +24,7 @@ nixio = ">=1.5.4"
 #### Jupyter Kernel
 
 [tasks]
-install-kernel = "python -m ipykernel install --user --name anda-d2"
+install-kernel = "python -m ipykernel install --user --name ni-d2"
 
 ### Jupyter Lab Environment (pixi run jupyter) #############
 

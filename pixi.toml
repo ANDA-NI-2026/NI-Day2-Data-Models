@@ -1,0 +1,45 @@
+[workspace]
+authors = ["Atle Rimehaug <atle.rimehaug@gmail.com"]
+channels = ["conda-forge"]
+name = "ni-day2"
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
+version = "0.1.0"
+
+[dependencies]
+python = ">=3.14.5,<3.15"
+numpy = ">=2.4.6,<3"
+xarray = ">=2026.4.0,<2027"
+pip = ">=26.1.1,<27"
+quantities = ">=0.16.4,<0.17"
+scipy = ">=1.17.1,<2"
+matplotlib = ">=3.10.9,<4"
+ipykernel = ">=7.2.0,<8"
+pynwb = ">=3.1.3,<4"
+netcdf4 = ">=1.7.4,<2"
+
+[pypi-dependencies]
+neo = ">=0.11.0"
+nixio = ">=1.5.4"
+
+#### Jupyter Kernel
+
+[tasks]
+install-kernel = "python -m ipykernel install --user --name anda-d2"
+
+### Jupyter Lab Environment (pixi run jupyter) #############
+
+[feature.jupyter.dependencies]
+python = "3.13.*"
+
+[feature.jupyter.pypi-dependencies]
+jupyterlab = ">=4"
+
+[feature.jupyter.tasks]
+jupyter = "jupyter lab"
+
+[environments.jupyter]
+features = ["jupyter"]
+no-default-feature = true
+
+################################################
+
